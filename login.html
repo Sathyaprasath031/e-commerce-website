@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <style>
+      *{
+        font-family:sans-serif;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: aliceblue;
+      }
+
+      .login-form {
+        display: flex;
+        text-align: center;
+        width: 300px;
+        height: 300x;
+        margin: 200px;
+        flex-direction: column;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+      input {
+        padding: 10px;
+        margin: 8px 0;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+      pre {
+        margin-top: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .signup {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+         .btn-grad {background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%)}
+         .btn-grad {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            font-weight:bold;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            font-size:18px;
+            display: block;
+            padding: 10px;
+            border-radius: 8px;
+            width:80%;
+            border:none;
+            align-self:center;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+    </style>
+  </head>
+  <body>
+    <form class="login-form">
+      <h1 style="color:#0056b3">Login</h1>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+      />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+      />
+      <button onclick="route(event)" class="btn-grad">Log in</button>
+      <pre>don't have an account? <a href="signup.html" class="signup">Sign up</a></pre>
+    </form>
+  </body>
+  <script>
+    let btn = document.getElementsByTagName("button");
+    function route(event) {
+      window.location.href = "index.html";
+    }
+  </script>
+</html>

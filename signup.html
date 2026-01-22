@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+  </head>
+  <style>
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color:aliceblue;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: 200px;
+      width: 300px;
+      height: fit-content;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      border: none;
+      background-color: white;
+      padding:20px;
+    }
+
+    input{
+        padding:10px;
+        margin:8px;
+    }
+    
+    .btn-grad {background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%)}
+         .btn-grad {
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            border:none;
+            font-weight:bold;
+            box-shadow: 0 0 20px #eee;
+            color:white;
+            box-sizing:border-box;
+            border-radius: 10px;
+            display: block;
+            font-size:18px;
+            padding:8px;
+            font-weight:bold;
+          }
+         .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+         }
+         .signup{
+        text-decoration: none;
+        font: size 21px;
+        font-weight:bold;
+      
+         }
+         .para{
+          font-size:21px;
+          font-weight:bold;
+          text-align:center;
+          margin: bottom 50px;
+         }
+        
+  </style>
+  <body>
+    <div>
+      <form>
+        <h1>Sign up</h1>
+        <input
+          type="text"
+          name="Fullname"
+          id="fullname"
+          placeholder="Enter your Full Name"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+        <input
+          type="password"
+          name="Password"
+          id="new password"
+          placeholder="Enter a New password"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          id="confirm password"
+          placeholder="Confirm password"
+          required
+        />
+
+        <button  onclick="route(event)" class="btn-grad">Signup</button>
+        <p class="para">Already have an account? <a href="login.html" class="signup">Login</a></p>
+      </form>
+    </div>
+  </body>
+  <script>
+    let btn=document.getElementsByTagName("button");
+    function route(event){
+      event.preventDefault();
+      window.location.href="login.html";
+    }
+  </script>
+</html>
